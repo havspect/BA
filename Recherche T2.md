@@ -33,7 +33,7 @@ Konstenlos von der Stadt Aachen zur Verfügung gestellten Daten im CSV-Format. N
 - Deutsch / Ausländer Anzahl
 
 **Mobilität in Deutschland**
-
+Im Tabellentool sind keine Querverknüpfungen möglich. Diese wären für unsere Auswertung allerdings von Bedeutung. Daten können theoretisch vom DLR bezogen werden. 
 
 
 
@@ -41,5 +41,5 @@ Konstenlos von der Stadt Aachen zur Verfügung gestellten Daten im CSV-Format. N
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQyNDk5ODMxXX0=
+eyJoaXN0b3J5IjpbLTEwOTAzNDQ0NSw2NDI0OTk4MzFdfQ==
 -->
