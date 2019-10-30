@@ -1,7 +1,7 @@
 # Recherche
 Aufgaben für den 2. Termin:
 
- - [ ] Datengrundlage für Mobilität in Deutschland analysieren
+ - [x] Datengrundlage für Mobilität in Deutschland analysieren
  - [ ] Hintergrundrecherche zum Thema "Mobilitätsforschung"
  - [ ] Zugang zum Datensatz???
 
@@ -39,13 +39,13 @@ Im Tabellentool sind keine Querverknüpfungen möglich. Diese wären für unsere
 Umfasst somit genau die Daten die wir haben wollen (Haushalt (Einkommen, Kinder, Arbeit -> Mobilität).
 *Problem*: Die Daten werden nur über die Clearing-Stelle des DLR rausgegeben und kosten je Datensatz 100 €. Unterteilt wird in für uns zwei interessante Datensätze:
 
- 
-
  - A: Bei diesem Datensatzpaket wurden aus Datenschutzgründen der Variablenbestand reduziert und die soziodemografischen und räumlichen Angaben vergröbert. Das Datensatzpaket enthält die Teildatensätze Haushalte, Autos, Personen und Wege. Das anonymisierte Datensatzpakt A steht allen Personen und Institutionen zur Verfügung.
  - B: Es enthält die höchste Auflösung von soziodemografischen und -ökonomischen Angaben zu Haushalten und Personen. Räumliche Analysen sind auf Ebene des Bundeslandes und in Abhängigkeit von Merkmalen wie z. B. dem regionalstatistischen Raumtyp oder der Qualität des öffentlichen Personenverkehrs am Wohnort möglich
 	 - Die drei faktisch anonymisierten Datensatzpakete werden ausschließlich für die Durchführung unabhängiger wissenschaftlicher Forschung sowie von Forschungsprojekten im Bundesinteresse und im öffentlichen Auftrag bereitgestellt.
 
+Was könnte man damit anfangen? 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzc4ODY2NzQsMzQyNDY4OTEzLC0xMD
-kwMzQ0NDUsNjQyNDk5ODMxXX0=
+eyJoaXN0b3J5IjpbLTQzOTM3NzY2OSwzNDI0Njg5MTMsLTEwOT
+AzNDQ0NSw2NDI0OTk4MzFdfQ==
 -->
