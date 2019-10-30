@@ -52,7 +52,16 @@ Umfasst somit genau die Daten die wir haben wollen (Haushalt (Einkommen, Kinder,
 
 Was könnte man damit anfangen? 
 
+````python
+import scipy
+
+def func(x):
+	return x**2
+
+new_var = func(2) # 4
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1MTI1NTU0MiwzNDI0Njg5MTMsLTEwOT
-AzNDQ0NSw2NDI0OTk4MzFdfQ==
+eyJoaXN0b3J5IjpbNTU0NzM5NDM2LC03NTEyNTU1NDIsMzQyND
+Y4OTEzLC0xMDkwMzQ0NDUsNjQyNDk5ODMxXX0=
 -->
