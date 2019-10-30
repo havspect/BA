@@ -36,8 +36,8 @@ Konstenlos von der Stadt Aachen zur Verfügung gestellten Daten im CSV-Format. N
 Im Tabellentool sind keine Querverknüpfungen möglich. Diese wären für unsere Auswertung allerdings von Bedeutung. Daten können theoretisch vom DLR bezogen werden. 
 >Der Datensatz der MiD umfasst die Angaben von gut 316.000 Personen aus 156.000 Haushalten. Im Rahmen der MiD wurden fast eine Million Wege erhoben.
 
-Umfasst somit genau die Daten die wir haben wollen (Haushalt (Einkommen, Kinder, Arbeit -> Mobilität). 
-
+Umfasst somit genau die Daten die wir haben wollen (Haushalt (Einkommen, Kinder, Arbeit -> Mobilität).
+*Problem*: Die Daten werden nur über die Clearing-Stelle des DLR rausgegeben und kosten je Datensatz 100 €. Unterteilt wird in für uns zwei interess
 
 
 
@@ -45,6 +45,6 @@ Umfasst somit genau die Daten die wir haben wollen (Haushalt (Einkommen, Kinder,
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQyNDY4OTEzLC0xMDkwMzQ0NDUsNjQyND
-k5ODMxXX0=
+eyJoaXN0b3J5IjpbMjcyNTgzNDE4LDM0MjQ2ODkxMywtMTA5MD
+M0NDQ1LDY0MjQ5OTgzMV19
 -->
