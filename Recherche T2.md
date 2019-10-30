@@ -20,6 +20,13 @@ Verfolgen einen 4-Schrittige Vorgehensweise:
 
 Ist das nicht genau der Anwendungsfall von e.GOD? Wollen die nicht vorhersagen, wie sich die Mobilität in einem Viertel verädndert, wenn sie einen MOD Service anbieten?
 
+**MatSim**
+
+**Mobilitätsforschung**
+
+**Lisbon-Studie**
+
+
 ## Datenquellen
 **OpenData Aachen**
 Konstenlos von der Stadt Aachen zur Verfügung gestellten Daten im CSV-Format. Nicht viele Tabellen für Transport dabei. Möglicherweise ist ein Datenblatt zu der Verteilung der Bevölkerung in Aachen ganz spannend:
@@ -46,6 +53,6 @@ Umfasst somit genau die Daten die wir haben wollen (Haushalt (Einkommen, Kinder,
 Was könnte man damit anfangen? 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzOTM3NzY2OSwzNDI0Njg5MTMsLTEwOT
+eyJoaXN0b3J5IjpbLTc1MTI1NTU0MiwzNDI0Njg5MTMsLTEwOT
 AzNDQ0NSw2NDI0OTk4MzFdfQ==
 -->
