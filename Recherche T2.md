@@ -42,9 +42,10 @@ Umfasst somit genau die Daten die wir haben wollen (Haushalt (Einkommen, Kinder,
  
 
  - A: Bei diesem Datensatzpaket wurden aus Datenschutzgründen der Variablenbestand reduziert und die soziodemografischen und räumlichen Angaben vergröbert. Das Datensatzpaket enthält die Teildatensätze Haushalte, Autos, Personen und Wege. Das anonymisierte Datensatzpakt A steht allen Personen und Institutionen zur Verfügung.
- - B: 
+ - B: Es enthält die höchste Auflösung von soziodemografischen und -ökonomischen Angaben zu Haushalten und Personen. Räumliche Analysen sind auf Ebene des Bundeslandes und in Abhängigkeit von Merkmalen wie z. B. dem regionalstatistischen Raumtyp oder der Qualität des öffentlichen Personenverkehrs am Wohnort möglich
+	 - Die drei faktisch anonymisierten Datensatzpakete werden ausschließlich für die Durchführung unabhängiger wissenschaftlicher Forschung sowie von Forschungsprojekten im Bundesinteresse und im öffentlichen Auftrag bereitgestellt.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkxMjA2MzMwLDM0MjQ2ODkxMywtMTA5MD
-M0NDQ1LDY0MjQ5OTgzMV19
+eyJoaXN0b3J5IjpbLTEyNzc4ODY2NzQsMzQyNDY4OTEzLC0xMD
+kwMzQ0NDUsNjQyNDk5ODMxXX0=
 -->
