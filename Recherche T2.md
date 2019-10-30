@@ -44,6 +44,7 @@ Im Tabellentool sind keine Querverknüpfungen möglich. Diese wären für unsere
 >Der Datensatz der MiD umfasst die Angaben von gut 316.000 Personen aus 156.000 Haushalten. Im Rahmen der MiD wurden fast eine Million Wege erhoben.
 
 Umfasst somit genau die Daten die wir haben wollen (Haushalt (Einkommen, Kinder, Arbeit -> Mobilität).
+
 *Problem*: Die Daten werden nur über die Clearing-Stelle des DLR rausgegeben und kosten je Datensatz 100 €. Unterteilt wird in für uns zwei interessante Datensätze:
 
  - A: Bei diesem Datensatzpaket wurden aus Datenschutzgründen der Variablenbestand reduziert und die soziodemografischen und räumlichen Angaben vergröbert. Das Datensatzpaket enthält die Teildatensätze Haushalte, Autos, Personen und Wege. Das anonymisierte Datensatzpakt A steht allen Personen und Institutionen zur Verfügung.
@@ -52,16 +53,7 @@ Umfasst somit genau die Daten die wir haben wollen (Haushalt (Einkommen, Kinder,
 
 Was könnte man damit anfangen? 
 
-````python
-import scipy
-
-def func(x):
-	return x**2
-
-new_var = func(2) # 4
-
-```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU0NzM5NDM2LC03NTEyNTU1NDIsMzQyND
+eyJoaXN0b3J5IjpbNDMwMjE1NzM2LC03NTEyNTU1NDIsMzQyND
 Y4OTEzLC0xMDkwMzQ0NDUsNjQyNDk5ODMxXX0=
 -->
