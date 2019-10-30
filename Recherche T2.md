@@ -1,0 +1,45 @@
+# Recherche
+Aufgaben für den 2. Termin:
+
+ - [ ] Datengrundlage für Mobilität in Deutschland analysieren
+ - [ ] Hintergrundrecherche zum Thema "Mobilitätsforschung"
+ - [ ] Zugang zum Datensatz???
+
+## Was gibt es bereits in der Mobilitätsforschung?
+
+**Travel Demand Modeling**
+Beschreibung des Victoria Institute for ..., über deren Travel Demand Modeling für Washington.
+> In general, travel analysis is performed to assist decision makers in making informed transportation planning decisions. The strength of modern travel demand forecasting is the ability to ask critical “what if” questions about proposed plans and policies.
+>(http://www.virginiadot.org/projects/resources/vtm/What_is_Travel_Demand_Modeling.pdf)
+
+Verfolgen einen 4-Schrittige Vorgehensweise:
+1. Trip Generation (the number of trips to be made)
+2. Trip Distribution (where those trips go)
+3. Mode Choice (how the trips will be divided among the available modes of travel)
+4. Trip assignment (predicting the route trips will take)
+
+Ist das nicht genau der Anwendungsfall von e.GOD? Wollen die nicht vorhersagen, wie sich die Mobilität in einem Viertel verädndert, wenn sie einen MOD Service anbieten?
+
+## Datenquellen
+**OpenData Aachen**
+Konstenlos von der Stadt Aachen zur Verfügung gestellten Daten im CSV-Format. Nicht viele Tabellen für Transport dabei. Möglicherweise ist ein Datenblatt zu der Verteilung der Bevölkerung in Aachen ganz spannend:
+- Statistischer Bezirk Nr.  
+- Statistischer Bezirk Name  
+- Personenanzahl  
+- Haupt-/Nebenwohnsitz Anzahl  
+- Männlich/Weiblich Anzahl  
+- Ledig / Verheiratet / Verwitwet / Geschieden Anzahl  
+- Altersklassen Anzahl  
+- Deutsch / Ausländer Anzahl
+
+**Mobilität in Deutschland**
+
+
+
+
+
+
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNjQyNDk5ODMxXX0=
+-->
