@@ -73,13 +73,19 @@ Hat wahrscheinlich eine wesentlich höheren Detaillierungsgrad als ihr euch wün
 Link: https://www.ptvgroup.com/de/loesungen/produkte/ptv-vissim/
 
 ## MATSim
-MATSim ist ein Multi-Agent Transport Simulationstool. Auf einer Karte werden Agenten (mit Bezug auf die aktuellen Census-Daten) gesetzt und mit einem Tagesablauf versehen. Diese bewegen sich dann über den Tag mit ei
+MATSim ist ein Multi-Agent Transport Simulationstool. Auf einer Karte werden Agenten (mit Bezug auf die aktuellen Census-Daten) gesetzt und mit einem Tagesablauf versehen. Diese bewegen sich dann über den Tag mit definierten Verkehrsmittel in der Stadt und erzeugen somit Verkehrsflüsse, welche im Anschluss ausgwertet werden können. 
+
+Die Auswertung kann mit verschiedenen Daten (Ökologie, soziales) untermauert werden und so viele Analyse gefahren werden. 
+
+Aufewndig ist dabei vorallem die Erstellung eines solchen Modells. Aussage von einem Doktoranten: 
+
+> Das ist e
 
 ## Daten für Aachen 
 
  - Auf der Seite des Instituts für Stadtbauwesen und Stadtverkehr gibt es Daten über den Rad-, Auto- und Busverkehr für mehrere Straßen im Stadtgebiet Aachen. https://www.isb.rwth-aachen.de/cms/ISB/Forschung/~juhm/Dauerzaehlstelle/
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0OTk4NTI5NCwxNzY1NTMwNDMyLC00OD
-E4MTQ1NTZdfQ==
+eyJoaXN0b3J5IjpbLTEwNDk0NTk0NDUsMTc2NTUzMDQzMiwtND
+gxODE0NTU2XX0=
 -->
