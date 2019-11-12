@@ -36,12 +36,19 @@ Link: http://wirtschaftinbewegung.com/Veranstaltungsinfo/mobilitaet-trifft-energ
 Hat sich auf die Analyse strategischer und operativer Mobilität festgelegt. 
 > Mit Hilfe der JobMOBILEETY-Wohnstandort- und Erreichbarkeitsanalyse schaffen wir Transparenz, welche Verkehrsmittel oder Verkehrsmittelkombinationen für Ihre MitarbeiterInnen grundsätzlich in Betracht kommen.
 
-Daraus können Erreichbarkeitsanalyse, Heat-Maps und generell eine
+Daraus können Erreichbarkeitsanalyse, Heat-Maps und generell eine transperente Darstellung der gesammelten Daten erreicht werden. 
+
+- die Identifizierung der verhaltensbeeinflussenden Rahmenbedingungen  
+ - die Ableitung individuell passender Mobilitätsangebote und Anreizelemente des Arbeitgebers, dazu Durchführung von Workshops mit fachlicher und methodischer Unterstützung von EcoLibro    
+- die Erarbeitung eines ganzheitlichen Mobilitätskonzepts  
+- Gespräche mit Mobilitätsdienstleistern
+
+Kunden sind eing
 
 ## Daten für Aachen 
 
  - Auf der Seite des Instituts für Stadtbauwesen und Stadtverkehr gibt es Daten über den Rad-, Auto- und Busverkehr für mehrere Straßen im Stadtgebiet Aachen. https://www.isb.rwth-aachen.de/cms/ISB/Forschung/~juhm/Dauerzaehlstelle/
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4ODI0MjU4NF19
+eyJoaXN0b3J5IjpbMjczMjM4ODI1XX0=
 -->
