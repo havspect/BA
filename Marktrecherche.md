@@ -47,6 +47,7 @@ Daraus können Erreichbarkeitsanalyse, Heat-Maps und generell eine transperente 
 Kunden sind einige Unternehmen und Stadtwerke, sowie Komunen und Behörden. Auch die **Stadt Aachen** wird unter Kunden aufgeführt. 
 
 Team: ca. 10 Leute 
+Link: https://www.ecolibro.de/de/
 
 ## Siemens Mobility GmbH
 
@@ -57,13 +58,19 @@ Leider wenig Informationen im Internet zu finden. Bieten allerdings ein Tool an,
 ## PTV Vissim
 
 Ist eine Verkehrssimulationssoftware, welche die Erreichbarkeit, Nachhaltigkeit und das Mobilitätsökosystem für einen abgeschlossenen Raum analysiert. 
-Mit dem Tool können in Städten verschiedene An
+Mit dem Tool können in Städten verschiedene Analysen durchgeführt werden:
+- Verkehrsflusssimulation
+- Multimodale Verkehrssimulation
+- Simulation autonomer Fahrzeuge
+- Verkehrssimulation Virtual Real
+
+Link: https://www.ptvgroup.com/de/loesungen/produkte/ptv-vissim/
 
 ## Daten für Aachen 
 
  - Auf der Seite des Instituts für Stadtbauwesen und Stadtverkehr gibt es Daten über den Rad-, Auto- und Busverkehr für mehrere Straßen im Stadtgebiet Aachen. https://www.isb.rwth-aachen.de/cms/ISB/Forschung/~juhm/Dauerzaehlstelle/
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NDYyNjAzLDE3NjU1MzA0MzIsLTQ4MT
-gxNDU1Nl19
+eyJoaXN0b3J5IjpbMTc2NDM1Mjg2MywxNzY1NTMwNDMyLC00OD
+E4MTQ1NTZdfQ==
 -->
