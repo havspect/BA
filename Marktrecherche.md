@@ -34,9 +34,10 @@ Link: http://wirtschaftinbewegung.com/Veranstaltungsinfo/mobilitaet-trifft-energ
 
 ## Eco Libro
 Hat sich auf die Analyse strategischer und operativer Mobilität festgelegt. 
+
 > Mit Hilfe der JobMOBILEETY-Wohnstandort- und Erreichbarkeitsanalyse schaffen wir Transparenz, welche Verkehrsmittel oder Verkehrsmittelkombinationen für Ihre MitarbeiterInnen grundsätzlich in Betracht kommen.
 
-Daraus können Erreichbarkeitsanalyse, Heat-Maps und generell eine transperente Darstellung der gesammelten Daten erreicht werden. Neben der Analyse, der Mitarbeiterwege sind auch 
+Daraus können Erreichbarkeitsanalyse, Heat-Maps und generell eine transperente Darstellung der gesammelten Daten erreicht werden. Neben der Analyse, der Mitarbeiterwege sind auch ökologische Analysen möglich.
 
 - die Identifizierung der verhaltensbeeinflussenden Rahmenbedingungen  
  - die Ableitung individuell passender Mobilitätsangebote und Anreizelemente des Arbeitgebers, dazu Durchführung von Workshops mit fachlicher und methodischer Unterstützung von EcoLibro    
@@ -45,10 +46,12 @@ Daraus können Erreichbarkeitsanalyse, Heat-Maps und generell eine transperente 
 
 Kunden sind einige Unternehmen und Stadtwerke, sowie Komunen und Behörden. Auch die **Stadt Aachen** wird unter Kunden aufgeführt. 
 
+Team: ca. 10 Leute 
+
 ## Daten für Aachen 
 
  - Auf der Seite des Instituts für Stadtbauwesen und Stadtverkehr gibt es Daten über den Rad-, Auto- und Busverkehr für mehrere Straßen im Stadtgebiet Aachen. https://www.isb.rwth-aachen.de/cms/ISB/Forschung/~juhm/Dauerzaehlstelle/
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjAzNjUyMF19
+eyJoaXN0b3J5IjpbLTQ4MTgxNDU1Nl19
 -->
