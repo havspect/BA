@@ -87,13 +87,21 @@ Link: https://matsim.org/
 
 ## Kooperation HERE und INRIX
 
-Aktuell noch kein Produkt auf dem Markt, wollen diese beide Unternehmen in der Zukunft zusammenarbeiten und könnten ein sehr einfaches und trotzdem 
+Aktuell noch kein Produkt auf dem Markt, wollen diese beide Unternehmen in der Zukunft zusammenarbeiten und könnten ein sehr einfaches und trotzdem detailliertes Bild der Mobilität schaffen. 
+
+Auszug aus den Unternehmensbeschreibungen:
+
+>INRIX is the global leader in connected car services and mobility analytics. Leveraging big data and the cloud, INRIX delivers comprehensive services and innovative solutions to help move people, cities and businesses forward. Our partners are automakers, governments, retailers, insurance agencies, advertisers and dozens of other industries that can benefit from understanding how people and vehicles move
+
+>HERE, Entwickler und Anbieter von cloudbasierten Kartendiensten, ermöglicht es Menschen, Unternehmen und Städten, vom Potenzial ortsbezogener Technologie zu profitieren. Dadurch können sie bessere, effizientere und nachhaltigere Ergebnisse erzielen - vom städtischen Infrastrukturmanagement über die Optimierung von Flotten und Warenströmen bis hin zur sicheren Navigation ans Fahrtziel.
+
+Link: [https://www.here.com/de/company/newsroom/press-releases/2018-07-12](https://www.here.com/de/company/newsroom/press-releases/2018-07-12)
 
 ## Daten für Aachen 
 
  - Auf der Seite des Instituts für Stadtbauwesen und Stadtverkehr gibt es Daten über den Rad-, Auto- und Busverkehr für mehrere Straßen im Stadtgebiet Aachen. https://www.isb.rwth-aachen.de/cms/ISB/Forschung/~juhm/Dauerzaehlstelle/
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NDM2MjAyNCwxNzY1NTMwNDMyLC00OD
+eyJoaXN0b3J5IjpbLTYyMzIyODE2OCwxNzY1NTMwNDMyLC00OD
 E4MTQ1NTZdfQ==
 -->
