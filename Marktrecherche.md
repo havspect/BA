@@ -48,10 +48,16 @@ Kunden sind einige Unternehmen und Stadtwerke, sowie Komunen und Behörden. Auch
 
 Team: ca. 10 Leute 
 
+## Siemens Mobility GmbH
+
+Leider wenig Informationen im Internet zu finden. Bieten allerdings ein Tool an, mit dem sich die Mobilität in Städten messen lassen soll.
+
+>Our Smart Urban Mobility Compass provides cities with a comprehensive view on their mobility system and derives future action areas to become a smart leader in mobility.
+
 ## Daten für Aachen 
 
  - Auf der Seite des Instituts für Stadtbauwesen und Stadtverkehr gibt es Daten über den Rad-, Auto- und Busverkehr für mehrere Straßen im Stadtgebiet Aachen. https://www.isb.rwth-aachen.de/cms/ISB/Forschung/~juhm/Dauerzaehlstelle/
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4MTgxNDU1Nl19
+eyJoaXN0b3J5IjpbMTc2NTUzMDQzMiwtNDgxODE0NTU2XX0=
 -->
