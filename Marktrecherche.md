@@ -60,9 +60,13 @@ Leider wenig Informationen im Internet zu finden. Bieten allerdings ein Tool an,
 Ist eine Verkehrssimulationssoftware, welche die Erreichbarkeit, Nachhaltigkeit und das Mobilitätsökosystem für einen abgeschlossenen Raum analysiert. 
 Mit dem Tool können in Städten verschiedene Analysen durchgeführt werden:
 - Verkehrsflusssimulation
+	>PTV Vissim unterstützt Stadtplaner, Verkehrsingenieure und Automobilhersteller bei der strategischen und operativen Entscheidungsfindung und ermöglicht ihnen, Verkehrsprobleme wie Staus und Emissionen spürbar zu verbessern und zu lösen. Profitieren Sie von einer freien Verkehrsmittelwahl.
+	
 - Multimodale Verkehrssimulation
+	> Unsere leistungsstarke multimodale Verkehrssimulationssoftware eignet sich perfekt für die Analyse sämtlicher Verkehrsmittel, einschließlich der Fußgängerströme. Durch die virtuelle Darstellung beliebiger Infrastrukturen – von Straßen über Anschlussstellen bis hin zu Verkehrsknotenpunkten – können Sie unterschiedlichste Was-wäre-wenn-Szenarien testen.
+	
 - Simulation autonomer Fahrzeuge
-- Verkehrssimulation Virtual Real
+- Verkehrssimulation Virtual Reality
 
 Link: https://www.ptvgroup.com/de/loesungen/produkte/ptv-vissim/
 
@@ -71,6 +75,6 @@ Link: https://www.ptvgroup.com/de/loesungen/produkte/ptv-vissim/
  - Auf der Seite des Instituts für Stadtbauwesen und Stadtverkehr gibt es Daten über den Rad-, Auto- und Busverkehr für mehrere Straßen im Stadtgebiet Aachen. https://www.isb.rwth-aachen.de/cms/ISB/Forschung/~juhm/Dauerzaehlstelle/
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NDM1Mjg2MywxNzY1NTMwNDMyLC00OD
+eyJoaXN0b3J5IjpbLTE4Mjc1NjE1MCwxNzY1NTMwNDMyLC00OD
 E4MTQ1NTZdfQ==
 -->
