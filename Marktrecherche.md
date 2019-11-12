@@ -54,10 +54,13 @@ Leider wenig Informationen im Internet zu finden. Bieten allerdings ein Tool an,
 
 >Our Smart Urban Mobility Compass provides cities with a comprehensive view on their mobility system and derives future action areas to become a smart leader in mobility.
 
+
+
 ## Daten für Aachen 
 
  - Auf der Seite des Instituts für Stadtbauwesen und Stadtverkehr gibt es Daten über den Rad-, Auto- und Busverkehr für mehrere Straßen im Stadtgebiet Aachen. https://www.isb.rwth-aachen.de/cms/ISB/Forschung/~juhm/Dauerzaehlstelle/
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NTUzMDQzMiwtNDgxODE0NTU2XX0=
+eyJoaXN0b3J5IjpbODc3NjY0NDg0LDE3NjU1MzA0MzIsLTQ4MT
+gxNDU1Nl19
 -->
