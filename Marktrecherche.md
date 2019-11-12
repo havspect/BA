@@ -68,6 +68,8 @@ Mit dem Tool können in Städten verschiedene Analysen durchgeführt werden:
 - Simulation autonomer Fahrzeuge
 - Verkehrssimulation Virtual Reality
 
+Hat wahrscheinlich eine wesentlich höheren Detaillierungsgrad als ihr euch wünscht. 
+
 Link: https://www.ptvgroup.com/de/loesungen/produkte/ptv-vissim/
 
 ## Daten für Aachen 
@@ -75,6 +77,6 @@ Link: https://www.ptvgroup.com/de/loesungen/produkte/ptv-vissim/
  - Auf der Seite des Instituts für Stadtbauwesen und Stadtverkehr gibt es Daten über den Rad-, Auto- und Busverkehr für mehrere Straßen im Stadtgebiet Aachen. https://www.isb.rwth-aachen.de/cms/ISB/Forschung/~juhm/Dauerzaehlstelle/
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mjc1NjE1MCwxNzY1NTMwNDMyLC00OD
+eyJoaXN0b3J5IjpbLTExNTI2NTAyOSwxNzY1NTMwNDMyLC00OD
 E4MTQ1NTZdfQ==
 -->
