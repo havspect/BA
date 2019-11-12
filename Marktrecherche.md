@@ -77,15 +77,19 @@ MATSim ist ein Multi-Agent Transport Simulationstool. Auf einer Karte werden Age
 
 Die Auswertung kann mit verschiedenen Daten (Ökologie, soziales) untermauert werden und so viele Analyse gefahren werden. 
 
-Aufewndig ist dabei vorallem die Erstellung eines solchen Modells. Aussage von einem Doktoranten: 
+Aufwendig ist dabei vorallem die Erstellung eines solchen Modells. Aussage von einem Doktoranten: 
 
-> Das ist e
+> Das ist eine eigene Doktorarbeit ein solches Modell für Aachen zu erstellen und zu füllen.
+
+Das Tool ist im Gegensatz zu PTV Vissim kostenlos und OpenSource und liefert richtig angewendet coole a
+
+Link: https://matsim.org/
 
 ## Daten für Aachen 
 
  - Auf der Seite des Instituts für Stadtbauwesen und Stadtverkehr gibt es Daten über den Rad-, Auto- und Busverkehr für mehrere Straßen im Stadtgebiet Aachen. https://www.isb.rwth-aachen.de/cms/ISB/Forschung/~juhm/Dauerzaehlstelle/
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDk0NTk0NDUsMTc2NTUzMDQzMiwtND
+eyJoaXN0b3J5IjpbLTEzNjA0NzMyNzIsMTc2NTUzMDQzMiwtND
 gxODE0NTU2XX0=
 -->
