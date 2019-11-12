@@ -85,11 +85,15 @@ Das Tool ist im Gegensatz zu PTV Vissim kostenlos und OpenSource und liefert ric
 
 Link: https://matsim.org/
 
+## Kooperation HERE und INRIX
+
+Aktuell noch kein Produkt auf dem Markt, wollen diese beide Unternehmen in der Zukunft zusammenarbeiten und könnten ein sehr einfaches und trotzdem 
+
 ## Daten für Aachen 
 
  - Auf der Seite des Instituts für Stadtbauwesen und Stadtverkehr gibt es Daten über den Rad-, Auto- und Busverkehr für mehrere Straßen im Stadtgebiet Aachen. https://www.isb.rwth-aachen.de/cms/ISB/Forschung/~juhm/Dauerzaehlstelle/
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1MjI3MDg4OCwxNzY1NTMwNDMyLC00OD
+eyJoaXN0b3J5IjpbMTQ3NDM2MjAyNCwxNzY1NTMwNDMyLC00OD
 E4MTQ1NTZdfQ==
 -->
