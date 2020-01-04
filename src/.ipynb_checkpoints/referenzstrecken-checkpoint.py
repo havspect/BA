@@ -58,6 +58,158 @@ def szenario_anpassungen(df, szenario, df_anpassungen):
     return df
 
 
+def spezifische_kosten_bestimmen(verkehrsmittel, df, verkehrsmittel_length, szenario):
+    """Bestimmt die Kosten in Abhängigkeit von per_trip or per_costs.
+    """
+    if verkehrsmittel in per_trip_costs:
+        return df.loc[(verkehrsmittel, "Kosten"), szenario]
+    else:
+        return df.loc[(verkehrsmittel, "Kosten"), szenario] \
+            * verkehrsmittel_length
+
+
+def kosten_bestimmen(row, df, szenario):
+    modes = [("mode_{0}".format(i), "mode_costs_{0}".format(
+        i), "mode_length_{0}".format(i)) for i in range(1, 6 + 1)]
+
+    for mode in modes:
+        if (isinstance(row[szenario].loc[mode[0]], (str)) and not
+                row[szenario].loc[mode[0]] == "" and not
+                row[szenario].loc[mode[0]] is None and
+                "Pod_" not in row[szenario].loc[mode[0]]):
+            row[szenario].loc[mode[1]] = spezifische_kosten_bestimmen(
+                row[szenario].loc[mode[0]],
+                df,
+                (int(row[szenario].loc[mode[2]])/1000),
+                szenario)
+
+        else:
+            break
+
+    return row
+
+
+def how_to_add(row, tmp, verkehrsmittel, mode, szenario):
+    """how_to_add(row, tmp, verkehrsmittel, mode)
+    Für die anteilige Berechnung der Verkehrsmittel wird ermittelt, welches
+    Verkehrsmittel den größten Anteil an der Gesamtstrecke hat.
+    Dafür müssen zunächst die Verkehrsmittel dem dict hinzugefügt werden.
+
+    """
+    if verkehrsmittel in tmp.keys():
+        tmp[verkehrsmittel] += row[(szenario, mode[2])]
+    else:
+        tmp[verkehrsmittel] = row[(szenario, mode[2])]
+    return tmp
+
+
+def f1(row, modes, szenario):
+    """f3(row)
+    Verkehrsmittel in eine Spalte schreiben und Verkehrsmittel des
+    ÖV zusammenfassen.
+
+    """
+    tmp = dict()
+    for mode in modes:
+        if row[(szenario, mode[0])] in oev_list:
+            tmp = how_to_add(row, tmp, "ÖV", mode, szenario)
+
+        elif row[(szenario, mode[0])] == "Pod_Straße_Small":
+            tmp = how_to_add(row, tmp, "Pod_Small", mode, szenario)
+            tmp["Pod_Small"] = 10000000
+            break
+
+        elif row[(szenario, mode[0])] == "Pod_Straße_Big":
+            tmp = how_to_add(row, tmp, "Pod_Big", mode, szenario)
+            tmp["Pod_Big"] = 10000000
+            break
+
+        elif row[(szenario, mode[0])] == "MIV":
+            tmp = how_to_add(row, tmp, "MIV", mode, szenario)
+
+        elif row[(szenario, mode[0])] in ["E-Bike", "Fahrrad"]:
+            tmp = how_to_add(row, tmp, "Fahrrad", mode, szenario)
+
+        elif isinstance(row[(szenario, mode[0])], str):
+            tmp = how_to_add(
+                row, tmp, row[(szenario, mode[0])], mode, szenario)
+
+    mode_max = max(tmp, key=tmp.get)
+    if mode_max == "zu Fuss" and len(tmp) > 1:
+        tmp.pop('zu Fuss', None)
+        mode_max = max(tmp, key=tmp.get)
+    return mode_max
+
+
+def spezfisiche_emissionen_weg(row, df, modes, kategorien, szenario):
+    """spezfisiche_emissionen_weg(row, df, modes, kategorien, szenarios)
+    Berechnet die spezifischen Emissionen für jede einzelne Strecke.
+    """
+    exceptions_kategorien = [
+        "Verfuegbarkeit",
+        "Transferzeit",
+        "Wartezeit",
+        "Fahrtzeit",
+        "Length"]
+    for kategorie in kategorien:
+        if kategorie not in exceptions_kategorien:
+            tmp = 0
+            for mode in modes:
+                if (isinstance(row[(szenario, mode[0])], (str)) and not
+                        row[(szenario, mode[0])] == ""):
+                    verkehrsmittel = row[(szenario, mode[0])]
+                    verkehrsmittel_length = row[(
+                        szenario, mode[2])] / 1000  # in km
+                    verkehrsmittel_costs = row[(szenario, mode[1])]
+                else:
+                    verkehrsmittel = "empty"
+                    break
+
+                if (kategorie == "Kosten" and
+                        isinstance(verkehrsmittel_costs, (int, float))):
+                    tmp += verkehrsmittel_costs
+
+                elif kategorie != "Unfallrisiko":
+                    # Länge der Teilstrecke mal den spezifischen Werten.
+                    tmp += verkehrsmittel_length \
+                        * df.loc[(verkehrsmittel, kategorie), szenario]
+                else:
+                    # Unfallrisiko ist auf 1 Mrd. Pkm/Tkm bezogen
+                    tmp += ((verkehrsmittel_length * 1000)
+                            / row[(szenario, "Length")]) \
+                            * df.loc[(verkehrsmittel, kategorie), szenario]
+
+            row.loc[(szenario, kategorie)] = tmp  # abspeichern in der Row
+
+        elif not kategorie == "Verfuegbarkeit":
+            row.loc[(szenario, kategorie)] = row[(szenario, kategorie)]
+
+    return row
+
+
+def emissionen_bestimmen(df, df_technologie, kategorien, szenario):
+    """emissionen_bestimmen(df, df_technologie, kategorien, szenario)
+
+
+    """
+    modes = [("mode_{0}".format(i), "mode_costs_{0}".format(
+        i), "mode_length_{0}".format(i)) for i in range(1, 6 + 1)]
+
+    # Emissionen je Weg bestimmen
+    df = df.apply(lambda row: spezfisiche_emissionen_weg(
+        row, df_technologie, modes, kategorien, szenario), axis=1)
+
+    # Bestimmen des Hautpverkehrsmittels je Row
+    df["Modal_Choice"] = df.apply(lambda row: f1(row, modes, szenario), axis=1)
+
+    modes_cols = [(szenario, mode[0]) for mode in modes] + \
+        [(szenario, mode[1]) for mode in modes] + \
+        [(szenario, mode[2]) for mode in modes]
+    df = df.drop(columns=modes_cols)
+
+    return df
+
+
 def build_cities(row, df, df_strecken, df_staedte):
     """build_cities(row)
     Hinzufügen der Stadttypen zu der Übersichtstabelle Verbindungen!
