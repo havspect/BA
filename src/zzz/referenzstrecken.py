@@ -12,52 +12,6 @@ oev_list = ["Bus", "Tram", "U-Bahn", "Zug-Nahverkehr", "Zug-Fernverkehr"]
 per_trip_costs = ["Bus", "Tram", "U-Bahn", "Flugzeug"]
 
 
-def rf_strecken_anpassungen(df, df_anpassungen, szenario):
-    modes = [("mode_{0}".format(i), "mode_costs_{0}".format(
-        i), "mode_length_{0}".format(i), "mode_factor_length_{0}".format(i),
-        "mode_factor_time_{0}".format(i), "mode_factor_wtime_{0}".format(i)) for i in range(1, 6 + 1)]
-    for mode in modes:
-        # Aufbau der Cols mit den Faktoren aus Tabelle Anpassungen
-        df[mode[3]] = [df_anpassungen.loc[(x, "Length"), szenario] if x in df_anpassungen.index.get_level_values(
-            0) else 1 for x in df[(szenario, mode[0])]]
-        df[mode[4]] = [df_anpassungen.loc[(x, "Fahrtzeit"), szenario] if x in df_anpassungen.index.get_level_values(
-            0) else 1 for x in df[(szenario, mode[0])]]
-        df[mode[5]] = [df_anpassungen.loc[(x, "Wartezeit"), szenario] if x in df_anpassungen.index.get_level_values(
-            0) else 1 for x in df[(szenario, mode[0])]]
-        # Anpassungen der Streckenlänge
-        df[(szenario, mode[2])] *= df[mode[3]]
-        df = df.drop([mode[3]], axis=1)
-    # Bestimmen der neuen Gesamtlänge
-    li = [(szenario, "mode_length_{0}".format(i)) for i in range(1, 6 + 1)]
-    df[(szenario, "Length")] = df.loc[:, li].sum(axis=1)
-
-    # Anpassen der Faktoren mit den Streckenanteilen
-    for mode in modes:
-        df.loc[:, mode[4]] *= (df.loc[:, (szenario, mode[2])] /
-                               df.loc[:, (szenario, "Length")])
-        df.loc[:, mode[5]] *= (df.loc[:, (szenario, mode[2])] /
-                               df.loc[:, (szenario, "Length")])
-    # Multiplikation der Fahrzeit mit dem Gesamtfaktor und löchen der Hilfscols
-    li = ["mode_factor_time_{0}".format(i) for i in range(1, 6 + 1)]
-    df[(szenario, "Fahrtzeit")] *= df[li].sum(axis=1)
-    df = df.drop(li, axis=1)
-    # Multiplikation Wartezeit mit Gesamtfaktor und löchen der Hilfscols
-    li = ["mode_factor_wtime_{0}".format(i) for i in range(1, 6 + 1)]
-    df[(szenario, "Wartezeit")] *= df[li].sum(axis=1)
-    df = df.drop(li, axis=1)
-    # Zusammenfügen zur neuen Gesamtfahrzeit
-    df[(szenario, "Transferzeit")] = df[(szenario, "Fahrtzeit")] + \
-        df[(szenario, "Wartezeit")]
-
-    return df
-
-
-def szenario_anpassungen(df, szenario, df_anpassungen):
-    df = df.apply(lambda row: szenario_anpassungen_row(
-        row, szenario, df_anpassungen), axis=1)
-    return df
-
-
 def build_cities(row, df, df_strecken, df_staedte):
     """build_cities(row)
     Hinzufügen der Stadttypen zu der Übersichtstabelle Verbindungen!
@@ -84,90 +38,6 @@ def build_cities(row, df, df_strecken, df_staedte):
 
     return row
 
-
-def is_number(num):
-    """is_number(num)
-    Testet ob eine Zahl wirklich eine Nummer ist durch Umwandlung
-    in einen float. Gibt einen Boolean zurück.
-    """
-    try:
-        float(num)
-        return True
-    except:
-        return False
-
-
-def f2(row, df, df_rad, szenario):
-    """f2(row, df, df_rad)
-    Rechnet die Marktanteile von E-Bike und Fahrrad ein.
-    Gibt die modifizierte Row zurück.
-    """
-    if row[(szenario, "THG")] > 0:
-        tmp = True
-    else:
-        tmp = False
-
-    for col in df.columns.tolist():
-        if col[0] == "Klassisch":
-            if tmp and is_number(row[col]):
-                row[col] *= (df_rad.loc["E-Bike", (2017, "Anzahl")]) / \
-                    df_rad[2017, "Anzahl"].loc["Rad_insgesamt"]
-            elif is_number(row[col]):
-                row[col] *= (df_rad.loc["Rad_insgesamt", (2017, "Anzahl")]
-                             / df_rad[2017, "Anzahl"].loc["Rad_insgesamt"])
-        else:
-            if tmp and is_number(row[col]):
-                row[col] *= (df_rad.loc["E-Bike", (2050, "Anzahl")]
-                             / df_rad[2050, "Anzahl"].loc["Rad_insgesamt"])
-            elif is_number(row[col]):
-                row[col] *= (df_rad.loc["Rad_insgesamt", (2050, "Anzahl")]
-                             - df_rad.loc["E-Bike", (2050, "Anzahl")]) \
-                    / df_rad[2050, "Anzahl"].loc["Rad_insgesamt"]
-
-    return row
-
-
-def sum_str(col):
-    """sum_str(col)
-    Berechnet die Summe für ein Column und ignoriert dabei Spalten, welche
-    nicht numerisch sind. Bei diesen Werten, wenn die Werte gleich sind
-    diese übernommen und sonst np.NaN ausgegeben.
-    """
-    if is_numeric_dtype(col):
-        return col.sum()
-    else:
-        return col.unique() if col.nunique() == 1 else np.NaN
-
-
-def mean_str(col):
-    """mean_str(col)
-    Berechnet den Mittelwert für ein Column und ignoriert dabei Spalten, welche
-    nicht numerisch sind.Bei diesen Werten, wenn die Werte gleich sind diese
-    übernommen und sonst np.NaN ausgegeben.
-    """
-    if is_numeric_dtype(col):
-        return col.mean()
-    else:
-        return col.unique() if col.nunique() == 1 else np.NaN
-
-
-def rad_berechnen(df, df_rad, szenario):
-    """rad_berechnen(df, df_rad)
-    Berechnet die spezifischen Emissionen für die Rad-Strecken.
-    Gibt den df: pd.DataFrame zurück.
-    """
-    df = df.loc[df.loc[:, ("Allgemein", "Name_Verbindung")] != np.NaN]
-    grouped = df.groupby([("Allgemein", "Name_Verbindung"), "Modal_Choice"])
-    index_names = df.loc[df["Modal_Choice"] == "Fahrrad"].index
-    df_new = df.copy()
-    df_new = df_new.drop(index_names)
-    for name, group in grouped:
-        if name[1] == "Fahrrad":
-            df_new = df_new.append(group.apply(lambda row: f2(
-                row, df, df_rad, szenario), axis=1).agg(sum_str),
-                ignore_index=True)
-    df_new = df_new.drop(columns=("Allgemein", "Name_Verbindung"))
-    return df_new
 
 
 def anteil_row_bestimmen(stadttyp, row, col, df_bev, mult):
@@ -236,55 +106,6 @@ def f4(col, szeanrio_base, df):
         col = (1 - col/df.loc[:, (szeanrio_base, col.name[1])])
     return col
 
-
-def verbesserunge_zu_szenario(df, szenario_base, styp=False):
-    """verbesserunge_zu_klassisch(df)
-
-    Part 1: Nimmt die berechneten Werte für die Emissionen
-    und Kosten und setzt sie ins Verhältnis zu den Klassischen Werten!
-    Part 2: Nimmt die berechneten Werte für die Emissionen
-    und Kosten und setzt diese ins Verhältnis zu den Trendszenario Werten!
-    """
-    grouped = df.groupby(level=0, axis=1)
-    df_new = pd.DataFrame()  # init empty DataFrame
-
-    reihenfolge = [df_new,
-                   grouped.get_group("Allgemein"),
-                   grouped.get_group("Modal_Choice"),
-                   ]
-    if not styp:
-        reihenfolge.append(grouped.get_group("Stadttypen"))
-
-    df_new = pd.concat(reihenfolge, axis=1, ignore_index=False)
-
-    exceptions_list = ["Allgemein", "Klassisch", "Stadttypen", "Modal_Choice"]
-    if szenario_base != "Klassisch":
-        exceptions_list = ["Allgemein", "Klassisch",
-                           "Stadttypen", "Modal_Choice"] + [szenario_base]
-
-    for name, group in grouped:
-        if name not in exceptions_list:
-            df_new = pd.concat([df_new, group.transform(
-                lambda col: f4(col, szenario_base, df))],
-                axis=1,
-                ignore_index=False)
-
-    return df_new
-
-
-def verbesserunge_zu_szenario_gesamt(datenbasis, wb):
-    for szenario in ["Klassisch", "Trendszenario"]:
-        df_tmp = verbesserunge_zu_szenario(
-            datenbasis["Ergebnisse_Personenverkehr"].df, szenario)
-        df_tmp_staedte = verbesserunge_zu_szenario(
-            datenbasis["Ergebnisse_Personenverkehr_städte"].df,
-            szenario,
-            styp=True)
-        sht_tmp = create_sheet(wb, "rf_pv_erg_ver_" + szenario, activate=False)
-        sht_tmp_styp = create_sheet(
-            wb, "rf_pv_erg_styp_" + szenario, activate=False)
-        sht_tmp.range("A1").value = df_tmp
-        sht_tmp_styp.range("A1").value = df_tmp_staedte
 
 
 def combine_pods_and_basis(df):
